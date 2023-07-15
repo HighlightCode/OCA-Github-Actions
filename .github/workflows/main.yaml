@@ -1,0 +1,21 @@
+name: 'GitHub Actions Basic'
+
+# push 를 할 때 마다 해당 Github Actions 를 돌리겠다.
+on: push
+
+jobs:
+  first-job:
+    name: 'AzFunc Github Actions Test'
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Say Hello World 1
+      shell: bash
+      run: |
+        echo "Hello World from step 1"
+
+    - name: Say Hello World 2
+      shell: pwsh
+      run: |
+        echo "Hello World from step 2"
